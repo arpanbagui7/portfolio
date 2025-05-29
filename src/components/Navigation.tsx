@@ -111,6 +111,7 @@ const Navigation = () => {
                 to={item.href}
                 duration={500}
                 offset={0}
+                onClick={() => setIsOpen(!isOpen)}
                 className='group w-full flex items-center space-x-3 py-4 px-6 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50/50 dark:hover:bg-blue-900/20 transition-all duration-300 border-b border-gray-100/50 dark:border-gray-700/50 last:border-b-0'
                 style={{ animationDelay: `${index * 0.1}s` }}>
                 <span className='font-medium'>{item.name}</span>

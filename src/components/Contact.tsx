@@ -185,7 +185,7 @@ const Contact = () => {
           <div className='animate-fade-in' style={{ animationDelay: "0.4s" }}>
             <div className='bg-gradient-to-br from-gray-800/90 to-gray-900/90 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-gray-700/50'>
               <h3 className='text-3xl font-bold mb-8 text-center bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent'>
-                Send a Message
+                Ping Me
               </h3>
 
               <form onSubmit={handleSubmit} className='space-y-6'>
