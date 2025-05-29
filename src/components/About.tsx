@@ -70,7 +70,7 @@ const About = () => {
               </p>
 
               <p className='text-gray-600 dark:text-gray-300 leading-relaxed'>
-                I'm passionate about{" "}
+                I&apos;m passionate about{" "}
                 <span className='font-semibold text-green-600 dark:text-green-400'>
                   clean code
                 </span>

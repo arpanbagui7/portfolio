@@ -40,9 +40,13 @@ const Contact = () => {
         setStatus("error");
         setMessage(data.message || "Failed to send message.");
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        setMessage(error.message);
+      } else {
+        setMessage("Unexpected error occurred.");
+      }
       setStatus("error");
-      setMessage(error.message || "Unexpected error occurred.");
     }
   };
 
@@ -103,14 +107,14 @@ const Contact = () => {
           </div>
           <div className='w-32 h-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mx-auto rounded-full mb-6 animate-pulse'></div>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            I'm always interested in hearing about{" "}
+            I&apos;m always interested in hearing about{" "}
             <span className='font-bold text-blue-400'>new opportunities</span>{" "}
             and
             <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold'>
               {" "}
               exciting projects
             </span>
-            . Let's discuss how we can work together!
+            . Let&apos;s discuss how we can work together!
           </p>
         </div>
 

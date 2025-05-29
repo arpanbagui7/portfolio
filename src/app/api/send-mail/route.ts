@@ -29,9 +29,16 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ message: "Email sent successfully" });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return NextResponse.json(
+        { message: "Failed to send email", error: error.message },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json(
-      { message: "Failed to send email", error: error.message },
+      { message: "Failed to send email", error: "Unknown error" },
       { status: 500 }
     );
   }
